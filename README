@@ -1,0 +1,42 @@
+Tokyo Cache Store
+=================
+
+An ActiveSupport (Rails) cache-store plugin for Tokyo Tyrant.
+
+Overview
+
+  * File based cache engine
+  * Lightning fast - performance comparable to memcached
+    http://www.mikeperham.com/2009/03/08/tokyo-cabinet-vs-memcached/
+  * High compression rates
+  * Excellent replication capabilities
+
+Requirements
+
+  Tokyo Cabinet:   
+  http://1978th.net/tokyocabinet/
+
+  Tokyo Tyrant:   
+  http://1978th.net/tokyotyrant/
+
+  (Fast) Ruby Bindings:  
+  sudo gem install actsasflinn-ruby-tokyotyrant --source=http://gems.github.com
+
+Installation
+
+  As a rails plugin:
+  script/plugin install git://github.com/dim/tokyo_cache_store.git
+
+  As a GEM:
+  sudo gem install dim-tokyo_cache_store --source=http://gems.github.com
+
+Usage (simplified)
+  
+  Create a new cache store:
+  tchmgr create ./tmp/cache/tt_store.tch # See 'man tchmgr' for a full list of options
+  
+  Start the tokyo-tyrant server:
+  ttserver ./tmp/cache/tt_store.tch # See 'man ttserver' for a full list of options
+  
+  Configure the Rails cache store (in environment.rb):
+  config.cache_store = :tokyo_cache_store, 'localhost', 1978

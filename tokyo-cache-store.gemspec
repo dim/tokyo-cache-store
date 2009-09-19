@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tokyo-cache-store}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dimitrij Denissenko"]
@@ -22,7 +22,10 @@ Gem::Specification.new do |s|
      "VERSION",
      "init.rb",
      "lib/active_support/cache/tokyo_store.rb",
-     "spec/tokyo_cache_store_spec.rb"
+     "pkg/.gitignore",
+     "spec/tokyo_cache_store_spec.rb",
+     "tmp/.gitignore",
+     "tokyo-cache-store.gemspec"
   ]
   s.homepage = %q{http://github.com/dim/tokyo-cache-store}
   s.rdoc_options = ["--charset=UTF-8"]

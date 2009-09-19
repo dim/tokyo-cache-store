@@ -25,10 +25,10 @@ Requirements
 Installation
 
   As a rails plugin:
-  script/plugin install git://github.com/dim/tokyo_cache_store.git
+  script/plugin install git://github.com/dim/tokyo-cache-store.git
 
   As a GEM:
-  sudo gem install dim-tokyo_cache_store --source=http://gems.github.com
+  sudo gem install dim-tokyo-cache-store --source=http://gems.github.com
 
 Usage (simplified)
   

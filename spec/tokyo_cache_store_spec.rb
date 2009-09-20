@@ -11,7 +11,7 @@ describe ActiveSupport::Cache::TokyoStore do
   
   before :all do
     `tchmgr create #{DB_FILE.to_str}`
-    `ttserver -dmn -le -pid #{PID_FILE.to_str} #{DB_FILE.to_str}`
+    `ttserver -dmn -le -port 45000 -pid #{PID_FILE.to_str} #{DB_FILE.to_str}`
   end
   
   after :all do
@@ -26,7 +26,7 @@ describe ActiveSupport::Cache::TokyoStore do
   end
   
   before do
-    @store = ActiveSupport::Cache::TokyoStore.new
+    @store = ActiveSupport::Cache::TokyoStore.new('127.0.0.1', 45000)
     @store.clear
     write 'A', 'B'
   end
@@ -41,8 +41,8 @@ describe ActiveSupport::Cache::TokyoStore do
     @store.write 'C', 'Plan C'
     @store.read('C').should == 'Plan C'
     
-    @store.delete('A').should be(true)
-    @store.delete('D').should be(false)    
+    @store.delete('A').should == 'Plan A'
+    @store.delete('D').should be_nil    
     @store.read('A').should be_nil
   end
 

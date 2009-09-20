@@ -19,7 +19,7 @@ begin
     spec.authors = ["Dimitrij Denissenko"]
     spec.test_files = Dir.glob('spec/**')
     spec.add_dependency('activesupport', '>= 2.3.0')
-    spec.add_dependency('actsasflinn-ruby-tokyotyrant', '>= 0.2.0')
+    spec.add_dependency('rufus-tokyo', '>= 1.0.1')
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"

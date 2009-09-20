@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tokyo-cache-store}
-  s.version = "0.1.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dimitrij Denissenko"]
-  s.date = %q{2009-09-19}
+  s.date = %q{2009-09-20}
   s.description = %q{Tokyo Tyrant cache store for ActiveSupport/Rails.}
   s.email = %q{contact@dvisionfactory.com}
   s.extra_rdoc_files = [
@@ -42,13 +42,13 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activesupport>, [">= 2.3.0"])
-      s.add_runtime_dependency(%q<actsasflinn-ruby-tokyotyrant>, [">= 0.2.0"])
+      s.add_runtime_dependency(%q<rufus-tokyo>, [">= 1.0.1"])
     else
       s.add_dependency(%q<activesupport>, [">= 2.3.0"])
-      s.add_dependency(%q<actsasflinn-ruby-tokyotyrant>, [">= 0.2.0"])
+      s.add_dependency(%q<rufus-tokyo>, [">= 1.0.1"])
     end
   else
     s.add_dependency(%q<activesupport>, [">= 2.3.0"])
-    s.add_dependency(%q<actsasflinn-ruby-tokyotyrant>, [">= 0.2.0"])
+    s.add_dependency(%q<rufus-tokyo>, [">= 1.0.1"])
   end
 end
